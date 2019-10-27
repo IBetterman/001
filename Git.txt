@@ -1,0 +1,40 @@
+#创建版本库
+#创建一个目录
+mkdir <filename>
+
+#删除目录
+rm -rf（向下递归删除）
+rm -f (直接强行删除）
+
+#显示当前目录，如果使用Windows，为避免错误，请确保目录名（包括父目录）不包含中文
+pwd
+
+#把这个目录变成Git可以管理的仓库
+git init
+
+#在创建的文件目录下编写文件后，告诉Git，把文件添加到仓库，一次只能添加一个
+git add file
+
+#把文件提交到仓库，一次可提交多个文件
+git commit
+git commit -m "输入本次提交的说明"
+
+
+
+#版本回退
+#查看历史记录
+git log
+git log --pretty=oneline
+
+#回退到上个版本为HEAD^,上上个版本就是HEAD^^,此版本之后的记录会被删除
+git reset --hard HEAD^
+
+#查看文件内容
+cat file
+
+#若命令窗口没有关闭，可以找到被删除的记录的版本号，写前几位就行
+git reset --hard 1094a...
+
+#查看每一次记录
+git reflog
+
