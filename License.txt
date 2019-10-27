@@ -1,1 +1,2 @@
 hello git bash
+creating a new branch is quick
